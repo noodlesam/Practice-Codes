@@ -24,7 +24,7 @@ public:
     }
     
     int getMinimumDifference(TreeNode *root) {
-		int min_diff = INT_MAX;
+	int min_diff = INT_MAX;
         int val = -1;
         solve(root, min_diff, val);
         return min_diff;
