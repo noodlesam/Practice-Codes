@@ -15,12 +15,11 @@ int solve(TreeNode *A, int &best) {
     int lft = 0;
     int rgt = 0;
     if (A -> left != NULL) {
-        lft = solve(A -> left, best);
+        lft = max(lft, solve(A -> left, best));
     }
     if (A -> right != NULL) {
-        rgt = solve(A -> right, best);
+        rgt = max(rgt, solve(A -> right, best));
     }
-    best = max(best, ret);
     best = max(best, ret + lft + rgt);
     return ret + max(lft, rgt);
 }
