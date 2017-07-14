@@ -8,6 +8,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+// LGTM
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
